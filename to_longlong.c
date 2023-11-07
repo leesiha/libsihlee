@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toll.c                                          :+:      :+:    :+:   */
+/*   to_longlong.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sihlee <sihlee@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:37:45 by sihlee            #+#    #+#             */
-/*   Updated: 2023/11/07 14:39:02 by sihlee           ###   ########.fr       */
+/*   Updated: 2023/11/07 14:53:51 by sihlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-long long	ft_toll(const char *str)
+long long	to_longlong(const char *str)
 {
 	int			i;
 	long long	flag;
