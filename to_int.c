@@ -6,11 +6,12 @@
 /*   By: sihlee <sihlee@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:35:57 by sihlee            #+#    #+#             */
-/*   Updated: 2023/11/07 14:53:34 by sihlee           ###   ########.fr       */
+/*   Updated: 2023/11/07 15:46:55 by sihlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <limits.h>
 
 int	to_int(const char *str)
 {
@@ -36,7 +37,7 @@ int	to_int(const char *str)
 		i++;
 	}
 	result = result * flag;
-	if (str[i] != 0 || result > 2147483647 || result < -2147483648)
+	if (str[i] != 0 || result > INT32_MAX || result < INT32_MIN)
 		exit(1);
 	return (result);
 }
