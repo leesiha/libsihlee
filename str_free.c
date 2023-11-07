@@ -6,7 +6,7 @@
 /*   By: sihlee <sihlee@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:46:29 by sihlee            #+#    #+#             */
-/*   Updated: 2023/11/07 14:49:00 by sihlee           ###   ########.fr       */
+/*   Updated: 2023/11/07 16:49:34 by sihlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	str_free(int cnt, ...)
 	int			count;
 	char		*ptr;
 
-	count = 1;
+	count = 0;
 	va_start(args, cnt);
-	while (count <= cnt)
+	while (count < cnt)
 	{
 		ptr = va_arg(args, char *);
 		free(ptr);
