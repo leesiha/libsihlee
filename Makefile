@@ -10,9 +10,9 @@ ARFLAGS		= rs
 
 INCLUDES	= ./libsihlee.h
 
-SRC			= ft_isalpha.c		\
-				ft_isdigit.c		\
-				ft_isalnum.c		\
+SRC			= to_int.c		\
+				to_longlong.c		\
+				error_check.c		\
 
 SRCS        = $(SRC)
 OBJS        = $(SRCS:.c=.o)

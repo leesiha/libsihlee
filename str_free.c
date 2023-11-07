@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libsihlee.h                                        :+:      :+:    :+:   */
+/*   str_free.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sihlee <sihlee@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 12:31:22 by sihlee            #+#    #+#             */
-/*   Updated: 2023/11/07 14:48:48 by sihlee           ###   ########.fr       */
+/*   Created: 2023/11/07 14:46:29 by sihlee            #+#    #+#             */
+/*   Updated: 2023/11/07 14:49:00 by sihlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBSIHLEE_H
-# define LIBSIHLEE_H
+#include "libsihlee.h"
 
-# include <stdarg.h>
-# include <stddef.h>
+int	str_free(int cnt, ...)
+{
+	va_list		args;
+	int			count;
+	char		*ptr;
 
-#endif
+	count = 1;
+	va_start(args, cnt);
+	while (count <= cnt)
+	{
+		ptr = va_arg(args, char *);
+		free(ptr);
+		ptr = NULL;
+		count++;
+	}
+	va_end(args);
+	return (count);
+}
